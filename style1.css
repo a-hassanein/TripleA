@@ -2,7 +2,7 @@
 body{
   background-color: rgb(255, 255, 255);
   margin: 0;
-  font-family: cairo;
+  font-family: 'Cairo', sans-serif;
 }
 /* --------------------------------- Start Header -------------------------------*/
 
@@ -41,7 +41,6 @@ width: 90%;
 height: 50px;
 color: rgb(255, 255, 255);
 box-sizing: border-box;
-font-family: Cairo;
 border-radius: 10px;
 padding-left: 10px;
 font-size: 20px;
@@ -57,10 +56,9 @@ height: 50px;
 margin-left: 5px;
 color: rgb(255, 255, 255);
 box-sizing: border-box;
-font-family: Cairo;
 border-radius: 15px;
-font-size: 18px;
-font-weight: 600;
+font-size: 15px;
+font-weight: 500;
 background-color: #ae0035;
 border: 1px solid rgb(150, 150, 150);
 
@@ -73,11 +71,10 @@ position: relative;
 width: 95%;
 height: 50px;
 box-sizing: border-box;
-font-family: Cairo;
 font-size: 25px;
 margin-right: 100px;
 margin-left: 100px;
-font-weight: 700;
+font-weight: bold;
 }
 
 #welcomeMsgDivID{
@@ -95,10 +92,9 @@ box-sizing: border-box;
   top: 25%;
   color: rgb(255, 255, 255);
   box-sizing: border-box;
-  font-family: Cairo;
   border-radius: 15px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #ae0035;
   border: 1px solid rgb(150, 150, 150);
 
@@ -112,10 +108,9 @@ box-sizing: border-box;
   top: 25%;
   color: rgb(255, 255, 255);
   box-sizing: border-box;
-  font-family: Cairo;
   border-radius: 15px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #ae0035;
   border: 1px solid rgb(150, 150, 150);
   
