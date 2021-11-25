@@ -43,12 +43,19 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
+    
+   
+   
 }
 .Container .contactInfo .box
 {
+    width: 300px;
     position: relative;
     padding: 20px 0;
     display: flex;
+    
 }
 .Container .contactInfo .box .icon
 {
@@ -77,10 +84,23 @@
 .contactForm
 {
     width: 40%;
-    padding: 40px;
+    padding: 40px ;
     background: #ae0035;
     border-radius: 15px;
     
+    
+}
+ #btncontainer
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+   
+   
 }
 .contactForm h2
 {
@@ -94,19 +114,9 @@
     width: 100%;
     margin-top: 10px;
 }
-.contactForm .inputBox .btn
-{
-    position: absolute;
-    transform: translateX(250px);
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    
-   
-}
-.contactForm .inputBox .btn:hover {
-    color: #ae0035;
-}
+
+
+
 
 
 .contactForm .inputBox input,
@@ -127,11 +137,12 @@
 {
     position: absolute;
     left: 0;
-    padding: 5px 0;
+    padding: 5px 5px;
     font-size: 16px;
     margin: 10px 0;
     pointer-events: none;
     transition: 0.5s;
+    color: grey;
 
 }
 .contactForm .inputBox  input:focus ~ span,
@@ -140,15 +151,15 @@
 .contactForm .inputBox  textarea:valid ~ span
 
 {
-    color:black;
+    color:white;
     font-size: 12px;
     transform: translateY(-25px);
 }
 .contactForm .inputBox input[type="submit"]
 {
     width: 100px;
-    background: black;
-    color: #fff;
+    background:white;
+    color:#ae0035;
     border: none;
     cursor: pointer;
     padding: 10px;
