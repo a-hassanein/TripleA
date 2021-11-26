@@ -1,0 +1,93 @@
+.image-holder {
+    display: table-cell;
+    background: url(../images/1.png);
+    background-size: cover;
+    width: auto;
+}
+.form-container {
+    display: table;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(-45deg , #fa1e60 , white);
+    align-items: center;
+}
+.signUp-Image form {
+    display: table-cell;
+    width: 200px;
+    height: 400px;
+    background-color: #ffffff;
+    padding: 40px 60px;
+    color: #AE0035 ;
+}
+.input-field-style
+{
+	height: 50px; 
+	background-color:whitesmoke;
+	border: 2px solid #AE0035 ; 
+    margin: 10px 0 ;
+	border-radius: 50px; 
+    display: flex;
+	align-items: center;
+}
+.input-field-style i {
+    flex: 1;
+    text-align: center;
+    color: #AE0035; 
+    font-size: 18px;
+
+}
+.input-field-style input{
+	flex: 5;
+	background: none;
+	border: none;
+	outline: none;
+	width: 100%;
+	font-size: 12px;
+	font-weight: 400;
+	color: black;
+}
+.btn
+{
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 50px;
+	background: #AE0035;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+    align-items: center;
+}
+.btn:hover
+{
+	background: #a52048 ;
+}
+.social-text{
+	margin: 10px 0;
+	font-size: 16px;
+}
+.social-media{
+	display: flex;
+	justify-content: center;
+}
+.social-icon{
+    height: 45px;
+ 	width: 45px;
+ 	display: flex;
+	justify-content: center;
+	align-items : center;
+	color: black;
+	border: 1px solid black;
+	border-radius: 50px;
+	margin: 0 5px;
+
+}
+.social-icon:hover{
+	color: #AE0035;
+	border-color: #AE0035;
+}
+a {
+	text-decoration: none;
+}

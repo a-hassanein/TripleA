@@ -8,6 +8,7 @@ function formValid(e){
         e.perventDefault
     }
     else{
+        
         e.target.submit
         
     }
