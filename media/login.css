@@ -1,6 +1,6 @@
 .image-holder {
     display: table-cell;
-    background: url(../images/1.png);
+    background: url(../images/2.png);
     background-size: cover;
     width: auto;
 }
@@ -12,7 +12,7 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     align-items: center;
 }
-.signUp-Image form {
+.login-Image form {
     display: table-cell;
     width: 200px;
     height: 400px;
