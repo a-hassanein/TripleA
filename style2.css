@@ -1,4 +1,11 @@
+/* body style */
+body{
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+}
 
+/* --------------------------------- Start Image Slider -------------------------------*/
 
 .slider{
     align-items: center;
@@ -28,6 +35,8 @@
       width:100% ;
       height: 700px;
   }
+
+  /* navigation manual */
 
   .navigation-manual{
     position: absolute;
@@ -69,6 +78,8 @@
     margin-left: -60%;
 }
 
+/* navigation auto */
+
 .navigation-auto{
     position: absolute;
     display: flex;
@@ -103,3 +114,48 @@
 #radioButtonID4:checked ~ .navigation-auto .auto-btn4{
     background:#ac0135;
 }
+
+/* --------------------------------- finsh Image slider ------------------------------- */
+
+
+/* ---------------------------------start Category Image Grid -------------------------------*/
+
+.CategoryImgGridID{
+    align-items: center;
+    width: 98%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+
+
+  .categoryImg{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.185), 0 6px 20px 0 rgba(0, 0, 0, 0.007);
+    width: 100%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-sizing: border-box;  
+  }
+
+  .categoryImg:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.397), 0 6px 20px 0 rgba(0, 0, 0, 0.342);
+  }
+
+/* --------------------------------- finish Category Image Grid -------------------------------*/
+/* --------------------------------- start footer -------------------------------*/
+
+footer{
+    background-color: #333;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+    margin-bottom: -1%;
+}
+
+/* --------------------------------- finish footer -------------------------------*/
+
+  
