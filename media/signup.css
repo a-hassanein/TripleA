@@ -90,3 +90,20 @@
 a {
 	text-decoration: none;
 }
+
+.color {
+    color: white;
+    font-size: larger;
+    font-style: initial;
+
+}
+
+.colorError {
+    font-size: small;
+    border: 5px;
+    background-color: white;
+    color: rgb(143, 25, 143);
+    ;
+
+
+}
