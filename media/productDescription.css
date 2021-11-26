@@ -1,0 +1,42 @@
+.row{
+    width: 90%;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.images{
+    height: 600px;
+    display: flex;
+}
+.product img{
+    height: 50px;
+    margin-bottom: 9px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.price{
+    color: #ae0035;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+input{
+    width: 30px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    background: #ae0035;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
