@@ -3,7 +3,11 @@ body{
     margin: 0;
     font-family: 'Cairo', sans-serif;
     box-sizing: border-box;
+    display: flex;
+    min-height:  100vh;
+    flex-direction: column;
 }
+
 
 /* --------------------------------- Start Image Slider -------------------------------*/
 
@@ -145,9 +149,9 @@ body{
   }
 
 /* --------------------------------- finish Category Image Grid -------------------------------*/
-/* --------------------------------- start footer -------------------------------*/
 
 footer{
+    position: sticky;
     text-align: center;
     background-color: #333;
     color: rgb(255, 255, 255);
@@ -155,16 +159,28 @@ footer{
     margin: 0px;
     padding: 0px;
     overflow: hidden;
-    margin-bottom: -1%;
+    margin-bottom: -5px;
+    margin-top: auto;
 }
-footer a,p,h1{
+footer a{
+    position: sticky;
     text-decoration: none;
     display:inline-block;
     color : rgb(255, 255, 255) ;
     font-size: 24px;
-    margin-top: -5px;
+    margin-top: auto;
+    margin-bottom: -10px;
 }
 
-/* --------------------------------- finish footer -------------------------------*/
+.footerItem{
+    position: sticky;
+    text-decoration: none;
+    display:inline-block;
+    color : rgb(255, 255, 255) ;
+    font-size: 24px;
+    margin-top: auto;
+    margin-bottom: -5px;
+    
+}
 
   
