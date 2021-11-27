@@ -48,3 +48,10 @@ button{
     box-sizing: border-box;
     cursor: pointer;
 }
+.rating{
+    display: flex;
+    height: 15px;
+}
+.rating .fa{
+    color: #ae0035;
+}
