@@ -14,7 +14,7 @@
 .headingParagraph{
     background:#ae0035;
     width: 100%;
-    height: 200px;
+    height: 150px;
     
     text-align: center;
     padding-top: 50px;
@@ -27,12 +27,14 @@
     font-size: 40px;
     font-weight: 900;
     margin: 20px;
+    margin-top: -35px;
 }
 .headingParagraph p{
     color: white;
     font-size: 18;
     font-weight: 700;
     margin: 10x;
+    margin-top: -25px;
 }
 .visionAndMissionContainer
 {
@@ -109,17 +111,20 @@
     display: flex;
     flex-direction: row;
     padding-top:20px ;
+    align-content: center;
 }
 
 .missionPoint
 {
+    
     border: 1px solid #ae0035;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     background:#ae0035;
     border-radius: 15px;
     position: relative;
     color: white;
+    
 }
 .visionContainer h1
 {
@@ -176,4 +181,6 @@
 {
     font-size: 18px;
     font-weight: 500;
+    padding-left: 40px;
+    padding-top: 20px;
 }
