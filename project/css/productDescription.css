@@ -60,8 +60,6 @@ button{
     width: 160px;
     height: 5px;
     margin: 26px auto;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 .row-review{
     display: flex;
@@ -77,9 +75,7 @@ button{
 .review{
     background:white;
     padding: 30px;
-    border-radius: 10%;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    border-radius: 10%
 }
 .review img{
     width: 100px;
