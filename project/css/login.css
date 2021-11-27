@@ -1,6 +1,6 @@
 .image-holder {
     display: table-cell;
-    background: url(../images/2.png);
+    background: url(../../images/2.png);
     background-size: cover;
     width: auto;
 }

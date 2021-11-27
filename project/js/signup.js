@@ -1,28 +1,22 @@
-// get data from user (Sign Up)
 var username = document.getElementById("username") ;
 var useremail = document.getElementById("email") ; 
 var userpass = document.getElementById("password") ; 
 var confirmpass = document.getElementById("Confirmpass") ;
-console.log(username) ;
-console.log(useremail);
-debugger ; 
-function CheckName() {
-    debugger ; 
-    if (username.length < 3 || username == "") {
-        username.setCustomValidity("Please Follow the requiements");
+function checkemail() {
+    if (useremail.value.length==0) {
+        useremail.setCustomValidity("Please fill this field");
     }
     else {
-        username.setCustomValidity('');
+        useremail.setCustomValidity('');
 
     }
-}
+};
 function validatePassword(){
-    debugger ; 
     if(userpass.value != confirmpass.value) {
         confirmpass.setCustomValidity("Passwords Don't Match");
     } else {
         confirmpass.setCustomValidity('');
     }
-  }
-  userpass.onchange = validatePassword;
-  confirmpass.onkeyup = validatePassword;
+};
+userpass.onchange = validatePassword;
+confirmpass.onkeyup = validatePassword;

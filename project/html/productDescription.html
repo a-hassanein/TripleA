@@ -8,32 +8,34 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Product Description</title>
-    <link rel="stylesheet" href="style1.css" class="stylesheet">
-    <link rel="stylesheet" href="signup.css" class="stylesheet">
-    <link  rel="stylesheet" href="productDescription.css" class="stylesheet">
-    <script src="productDescription.js"></script>
+    <link rel="stylesheet" href="../css/style1.css" class="stylesheet">
+    <link rel="stylesheet" href="../css/signup.css" class="stylesheet">
+    <link rel="stylesheet" href="../css/productDescription.css" class="stylesheet">
+    <script src="../js/productDescription.js"></script>
 
 </head>
-<header>
 
-    <!-- start header -->
-    <div id="headerDivID">
-        <div><img src="../images/3A_logo.png" id="logoImageID"></div><!-- logo -->
-        <div id="searchDivID">
-            <!-- search -->
-            <form>
-                <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
-                <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
-            </form>
-        </div>
-        <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
-        <div><input type="button" id="SigninID" value="SIGN IN"></div><!-- Sign in button -->
-        <div><input type="image" src="../images/cart.png" id="cartID"></div> <!-- cart button -->
-    </div>
-
-</header>
 
 <body style="margin: 0;padding: 0;font-family: sans-serif;">
+    <header>
+
+        <!-- start header -->
+        <div id="headerDivID">
+            <div><img src="../../images/3A_logo.png" id="logoImageID"></div><!-- logo -->
+            <div id="searchDivID">
+                <!-- search -->
+                <form>
+                    <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
+                    <input type="button" value="SEARCH" id="searchButtonID"><!-- search button -->
+                </form>
+            </div>
+            <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
+            <div><input type="button" id="SigninID" value="SIGN IN"></div><!-- Sign in button -->
+            <div><input type="button" id="SignupID" value="SIGN UP"></div><!-- Sign up button -->
+            <div><input type="image" src="../../images/cart.png" id="cartID"></div> <!-- cart button -->
+        </div>
+
+    </header>
     <nav>
         <!-- Nav bar -->
         <div class="navbar">
@@ -131,33 +133,34 @@
             <div class="col" style="flex-basis: 45%;">
                 <div class="images">
                     <div class="product">
-                        <img src="../images/sweetshirt.jpg" alt="sweetshirt" onclick="clickme(this)">
-                        <img src="../images/sweetshirt1.jpg" alt="sweetshirt" onclick="clickme(this)">
-                        <img src="../images/sweetshirt3.jpg" alt="sweetshirt" onclick="clickme(this)">
-                        <img src="../images/sweetshirt4.jpg" alt="sweetshirt" onclick="clickme(this)">
+                        <img src="../../images/sweetshirt.jpg" alt="sweetshirt" onclick="clickme(this)">
+                        <img src="../../images/sweetshirt1.jpg" alt="sweetshirt" onclick="clickme(this)">
+                        <img src="../../images/sweetshirt3.jpg" alt="sweetshirt" onclick="clickme(this)">
+                        <img src="../../images/sweetshirt4.jpg" alt="sweetshirt" onclick="clickme(this)">
                     </div>
                     <div class="preview">
-                        <img src="../images/sweetshirt.jpg" id="imagebox" alt="sweetshirt"style = "height: 100%;">
+                        <img src="../../images/sweetshirt.jpg" id="imagebox" alt="sweetshirt" style="height: 100%;">
                     </div>
                 </div>
             </div>
             <div class="col" style="flex-basis: 45%;">
-            <!-- second col for the details -->
+                <!-- second col for the details -->
                 <div class="details">
                     <h3 style="font-size: 45px;  color:black">AE FLEECE OVERSIZED VINTAGE CREW NECK SWEATSHIRT</h3>
                     <div> Product Description
-                       <p>
-                        All the comfy vibes you need. This sweatshirt is washed and treated for a vintage look we love. Layer your way!
-                       </p>    
+                        <p>
+                            All the comfy vibes you need. This sweatshirt is washed and treated for a vintage look we
+                            love. Layer your way!
+                        </p>
                     </div>
-                     <p class="price">Price: EGP 550.00</p>
+                    <p class="price">Price: EGP 550.00</p>
                     <p>Size<select name="size">
                             <option value="select size">select size</option>
                             <option value="small">small</option>
                             <option value="medium">medium</option>
                             <option value="large">large</option>
                         </select></p>
-                    <p>Quantity<input type="text" class = "quantity" value="1"></p>
+                    <p>Quantity<input type="text" class="quantity" value="1"></p>
                     <button type="button">
                         <i class="fa fa-shopping-cart"></i>
                         Add to cart</button>

@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="style1.css" class="stylesheet">
-    <link rel="stylesheet" href="signup.css" class="stylesheet">
+    <link rel="stylesheet" href="../css/style1.css" class="stylesheet">
+    <link rel="stylesheet" href="../css/signup.css" class="stylesheet">
+
 
 </head>
 <header>
 
     <!-- start header -->
     <div id="headerDivID">
-        <div><img src="../images/3A_logo.png" id="logoImageID"></div><!-- logo -->
+        <div><img src="../../images/3A_logo.png" id="logoImageID"></div><!-- logo -->
         <div id="searchDivID">
             <!-- search -->
             <form>
@@ -26,7 +27,7 @@
         </div>
         <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
         <div><input type="button" id="SigninID" value="SIGN IN"></div><!-- Sign in button -->
-        <div><input type="image" src="../images/cart.png" id="cartID"></div> <!-- cart button -->
+        <div><input type="image" src="../../images/cart.png" id="cartID"></div> <!-- cart button -->
     </div>
 
 </header>
@@ -128,18 +129,18 @@
     <div class="signUp-Image" style="background: #ffffff; padding: 80px 0">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form id="form" class="signup-form" action="../Home.html">
+            <form id="form" action="../Home.html">
                 <div class="header">
                     <h2>Welcome to our Website Bro</h2>
                 </div>
                 <div class="input-field-style">
                     <i class="fas fa-user" aria-hidden="true"></i>
-                    <input type="text" placeholder="Enter Your User Name" id="username" aria-required="true"
-                        minlength="3" aria-describedby="name-format" onblur="CheckName()" required />
+                    <input type="text" placeholder="Enter Your User Name" id="username" minlength="3"
+                        aria-describedby="name-format" onblur="checkname()" required>
                 </div>
                 <div class="input-field-style">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <input type="email" placeholder="Enter Your Email" id="email" required />
+                    <input type="email" placeholder="Enter Your Email" id="email" onblur="checkemail()" required />
                 </div>
                 <div class="input-field-style">
                     <i class="fa fa-lock" aria-hidden="true"></i>
@@ -147,11 +148,12 @@
                 </div>
                 <div class="input-field-style">
                     <i class="fa fa-lock" aria-hidden="true"></i>
-                    <input type="password" placeholder="Confirm Passaword" id="Confirmpass" onblur="validatePassword()"
-                        required />
+                    <input type="password" placeholder="Confirm Passaword" id="Confirmpass" onblur="validatePassword()" required />
                 </div>
                 <!--  -->
-                <button class="btn" style="align-items: center; text-align: center;">Sign Up</button>
+                <button class="btn" style="align-items: center; text-align: center;" onclick="save()">Sign Up</button>
+                <span id="popup">
+                </span>
                 <p class="social-text" style="text-align: center; align-items: center;">sign up with </p>
                 <div class="social-media">
                     <a href="#" class="social-icon">
@@ -167,15 +169,14 @@
             </form>
         </div>
     </div>
-    <script>
-        // get data from user (Sign Up)
+    <script type="text/javascript" scr="signup.js">
         var username = document.getElementById("username");
         var useremail = document.getElementById("email");
         var userpass = document.getElementById("password");
         var confirmpass = document.getElementById("Confirmpass");
         console.log(username);
         console.log(useremail);
-        function CheckName() {
+        function checkname() {
             if (username.length < 3 || username == "") {
                 username.setCustomValidity("Please Follow the requiements");
             }
@@ -183,18 +184,46 @@
                 username.setCustomValidity('');
 
             }
-        }
+        };
+        function checkemail() {
+            if (useremail.value.length) {
+                username.setCustomValidity("Please fill this field");
+            }
+            else {
+                username.setCustomValidity('');
+
+            }
+        };
         function validatePassword() {
             if (userpass.value != confirmpass.value) {
                 confirmpass.setCustomValidity("Passwords Don't Match");
             } else {
                 confirmpass.setCustomValidity('');
             }
-        }
-        userpass.onchange = validatePassword;
-        confirmpass.onkeyup = validatePassword;
-    </script>
+        };
+        userpass.onchange = validatePassword();
+        confirmpass.onkeyup = validatePassword();
+        function save() {
+            var username = document.getElementById("username");
+            var useremail = document.getElementById("email");
+            var userpass = document.getElementById("password");
+            var confirmpass = document.getElementById("Confirmpass"); 
+            if (username.value.length == 0) {
+                username.setCustomValidity("Please fill this field");
 
+            } else if (userpass.value.length == 0) {
+                userpass.setCustomValidity("Please fill this field");
+
+            } else if (username.value.length == 0 && userpass.value.length == 0) {
+                username.setCustomValidity("Please fill this field");
+                userpass.setCustomValidity("Please fill this field");
+            } else {
+                localStorage.setItem('name', name.value);
+                localStorage.setItem('pw', pw.value);
+                document.getElementById("popup").innerText ="Your account have created" 
+            }
+        }
+    </script>
 </body>
 
 </html>

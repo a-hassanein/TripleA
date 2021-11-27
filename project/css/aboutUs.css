@@ -50,7 +50,7 @@
 .background
 {   position: relative;
   
-    background-image: url("vision.png");
+    background-image: url("../../images/vision.png");
     background-position: center; 
     background-size: cover;
     display: flex;
@@ -129,7 +129,7 @@
 
 .missionBackground
 {
-    background-image: url("mission.jpeg");
+    background-image: url("../../images/mission.jpeg");
     background-position: center;
     background-size: cover;
     opacity: 0.8;
