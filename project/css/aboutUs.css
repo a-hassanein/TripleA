@@ -28,6 +28,7 @@
     font-weight: 900;
     margin: 20px;
     margin-top: -35px;
+    padding: 15px;
 }
 .headingParagraph p{
     color: white;
@@ -108,10 +109,12 @@
 .missionContent
 {
     position: relative;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
     padding-top:20px ;
-    align-content: center;
+    
+
+    
 }
 
 .missionPoint
