@@ -51,6 +51,7 @@ button{
 .rating{
     display: flex;
     height: 15px;
+    
 }
 .rating .fa{
     color: #ae0035;
@@ -59,6 +60,8 @@ button{
     width: 160px;
     height: 5px;
     margin: 26px auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .row-review{
     display: flex;
@@ -75,6 +78,8 @@ button{
     background:white;
     padding: 30px;
     border-radius: 10%;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .review img{
     width: 100px;
