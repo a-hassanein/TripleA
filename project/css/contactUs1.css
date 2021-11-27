@@ -19,7 +19,7 @@
 }
 .contact .content h2{
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
     
@@ -28,6 +28,7 @@
 {
 
     font-weight: 400;
+    margin-top: -20px;
     
 }
 .Container
@@ -107,12 +108,14 @@
     font-size: 30px;
     font-weight: 500;
     color: white;
+    text-align-last: center;
 }
 .contactForm .inputBox
 {
     position: relative;
     width: 100%;
     margin-top: 10px;
+    text-align-last: center;
 }
 
 
@@ -132,6 +135,7 @@
     box-sizing: border-box;
    font-size: 20px;
     border: 0.5px solid rgb(150, 150, 150);
+    
 }
 .contactForm .inputBox span
 {
@@ -140,9 +144,11 @@
     padding: 5px 5px;
     font-size: 16px;
     margin: 10px 0;
+    margin-left: 45px;
     pointer-events: none;
     transition: 0.5s;
     color: grey;
+    
 
 }
 .contactForm .inputBox  input:focus ~ span,
