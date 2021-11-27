@@ -60,6 +60,8 @@
     grid-template-rows: auto 1fr;
     border-radius: 15px;
     
+   
+    
     /* border: 1px solid #ae0035; */
 }
 
@@ -84,7 +86,7 @@
 .productDetails
 {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
 
 }
 
@@ -99,7 +101,7 @@
 
 .price 
 {
-    text-align: left;
+    text-align: right;
 }
 
 
@@ -124,6 +126,8 @@
     font-weight: 600;
     width: 180px;
     cursor: pointer;
+    margin: 0 auto;
+    
 }
 
 
