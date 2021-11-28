@@ -15,9 +15,9 @@
 .login-Image form {
     display: table-cell;
     width: 200px;
-    height: 400px;
+    height: 500px;
     background-color: #ffffff;
-    padding: 40px 60px;
+    padding: 40px 40px;
     color: #AE0035 ;
 }
 .input-field-style

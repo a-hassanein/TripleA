@@ -9,6 +9,9 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/style1.css" class="css">
     <link rel="stylesheet" href="../css/login.css" class="css">
+    <link rel="stylesheet" href="../css/Footer_style.css" class="css">
+    <script src="../js/login.js"></script>
+
     <title>Log In</title>
 </head>
 <header>
@@ -124,7 +127,7 @@
   <div class="login-Image" style="background: #ffffff; padding: 80px 0">
     <div class="form-container">
         <div class="image-holder"></div>
-        <form id="form" class="signup-form" action="../Home.html">
+        <form id="form" class="signin-form" action="../html/Home.html">
             <div class="header">
                 <h2>Welcome back</h2>
             </div>
@@ -137,7 +140,7 @@
                 <input type="password" placeholder="Enter Your Password" id="password" required />
             </div>
             <!--  -->
-            <button class="btn" style="align-items: center; text-align: center;">Log In</button>
+            <button class="btn" style="align-items: center; text-align: center;" onclick="check()">Log In</button>
             <p class="social-text" style="text-align: center; align-items: center;">log in with</p>
             <div class="social-media">
                 <a href="#" class="social-icon">
@@ -153,7 +156,18 @@
         </form>
     </div>
 </div>	
-
+  <!-- Start Footer -->
+  <footer>
+    <a href="Home.html" style="font-size: 28px; margin-top: 20px;">Home</a> |
+    <a href="contactUsNew.html" style="font-size: 28px;">Contact Me</a> |
+    <a href="aboutUs.html" style="font-size: 28px;">About Us</a>
+    <br><br>
+    <p style="color : rgb(255, 255, 255) ;">&copy; Tripla A team (Team3)</p>
+    <br>
+    <p style="color : rgb(255, 255, 255) ; margin-top: -30px;"><a
+            href="mailto:TripalA@gmail.com">TripalA@gmail.com</a></p>
+</footer>
+<!-- end Footer -->
 </body>
 
 </html>
