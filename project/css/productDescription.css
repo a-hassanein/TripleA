@@ -1,20 +1,23 @@
 .row{
-    width: 70%;
-    height: 700px;
+    width: 80%;
+    height: 750px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .images{
-    height: 600px;
+    height: 700px;
     display: flex;
 }
 .product img{
-    height: 50px;
+    height: 60px;
     margin-bottom: 9px;
     cursor: pointer;
     opacity: 0.7;
+    padding: 0;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 .pageHeading
 {
