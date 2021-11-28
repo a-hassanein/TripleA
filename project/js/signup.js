@@ -9,16 +9,17 @@ function savedata(){
     localStorage.setItem("confirmpassword", confirmpass.value);
 
 }
-
+//////////////////////////////////////////////////////////////////////////////////////
 function validatePassword(){
     var userpass = document.getElementById("password") ; 
     var confirmpass = document.getElementById("Confirmpass") ;
-    if(userpass.value != confirmpass.value) {
+    if(userpass.value !== confirmpass.value) {
         confirmpass.setCustomValidity("Passwords Don't Match");
     } else {
         confirmpass.setCustomValidity('');
     }
 };
+/////////////////////////////////////////////////////////////////////////////////////////
 function checkpass(validatePassword)
 {
     var userpass = document.getElementById("password") ; 
@@ -26,11 +27,11 @@ function checkpass(validatePassword)
     userpass.onchange = validatePassword;
     confirmpass.onkeyup = validatePassword;
 }
-
+///////////////////////////////////////////////////////////////////////////////////////
 function getdata(){
     var username = localStorage.getItem("name");
     var useremail = localStorage.getItem("email");
     var userpass = localStorage.getItem("pass");
     var confirmpass = localStorage.getItem("confirmpassword");
 }
-
+//////////////////////////////////////////////////////////////////////////////////////
