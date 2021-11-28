@@ -15,8 +15,10 @@ function validatePassword(){
     var confirmpass = document.getElementById("Confirmpass") ;
     if(userpass.value !== confirmpass.value) {
         confirmpass.setCustomValidity("Passwords Don't Match");
+        return false;
     } else {
         confirmpass.setCustomValidity('');
+        return true;
     }
 };
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -35,3 +37,16 @@ function getdata(){
     var confirmpass = localStorage.getItem("confirmpassword");
 }
 //////////////////////////////////////////////////////////////////////////////////////
+function buttonSubmit(ev) {
+
+    if (validatePassword()) {
+        ev.target.submit();
+        location.href="../html/Home.html"
+        document.getElementById("invalid").innerHTML = "";
+    }
+    else {
+        ev.preventDefault();
+        document.getElementById("invalid").innerText= "❌ Please correct the validation errors first";
+
+    }
+}
