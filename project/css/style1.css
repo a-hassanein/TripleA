@@ -122,8 +122,23 @@ box-sizing: border-box;
   height: 40px;
   margin-top: 30px;
   margin-left: 30px;
+}
+
+.cart_Number{
+  position: relative ;
+  box-sizing: border-box;
+  text-decoration: none;
+  
+  color: #ae0035;
+  font-weight: 300px;
+  font-size: 20px;
+  float: right;
+  margin-top: 32px;
+  padding: 0%;
+  
   
 }
+
 
 
 
