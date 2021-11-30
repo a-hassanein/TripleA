@@ -17,27 +17,29 @@
 
   <title>Log In</title>
 </head>
-<header>
-
-  <!-- start header -->
-  <div id="headerDivID">
-    <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
-    <div id="searchDivID">
-      <!-- search -->
-      <form action="Home.html">
-        <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
-        <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
-      </form>
-    </div>
-    <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
-    <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
-    <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
-  </div>
-  </div>
-
-</header>
 
 <body>
+  <header>
+
+    <!-- start header -->
+    <div id="headerDivID">
+      <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
+      <div id="searchDivID">
+        <!-- search -->
+        <form action="Home.html">
+          <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
+          <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
+        </form>
+      </div>
+      <div id="welcomeMsgDivID"><span id="welcomeMsgID"></span></div><!-- welcome Message -->
+      <div><a href="Home.html"><input type="button" style="display: none;" id="LogoutID" value="LOGOUT"></a></div><!-- logout button -->
+      <div><a href="login.html"><input type="button" id="SigninID" style="display: none;" value="SIGN IN"></a></div><!-- Sign in button -->
+      <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
+      <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span    <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
+    </div>
+    </div>
+  
+  </header>
   <nav>
     <!-- Nav bar -->
     <div class="navbar">
@@ -128,13 +130,13 @@
   <div class="login-Image" style="background: #ffffff; padding: 80px 0">
     <div class="form-container">
       <div class="image-holder"></div>
-      <form id="form" class="signin-form" action="../html/Home.html">
+      <form id="form" class="signin-form" onsubmit="test(event)">
         <div class="header">
           <h2>Welcome back</h2>
         </div>
         <div class="input-field-style">
           <i class="fa fa-envelope" aria-hidden="true"></i>
-          <input type="email" placeholder="Enter Your Email" id="email" required />
+          <input type="text" placeholder="Enter Your Username" id="username" required />
         </div>
         <div class="input-field-style">
           <i class="fa fa-lock" aria-hidden="true"></i>
@@ -154,6 +156,8 @@
             <i class="fab fa-google" aria-hidden="true"></i>
           </a>
         </div>
+        <br>
+        <a href="signup.html" style="text-align: center; align-items: center; color: #AE0035;" target="_blank">If you havent , you can create account?</a>
       </form>
     </div>
   </div>
@@ -170,6 +174,8 @@
   </footer>
   <!-- end Footer -->
   <script src="../js/menTrousers.js"></script>
+  <script src="../js/login.js"></script>
+
 </body>
 
 </html>

@@ -17,26 +17,32 @@
     <script src="../js/signup.js"></script>
 
 </head>
-<header>
 
-    <!-- start header -->
-    <div id="headerDivID">
-        <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
-        <div id="searchDivID"><!-- search -->
-            <form action="Home.html">
-            <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
-            <input type="submit"  value="SEARCH" id="searchButtonID"><!-- search button -->
-            </form>
-        </div>
-        <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
-        <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
-        <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
-    </div>
-
-</header>
 
 <body>
+    <header>
 
+        <!-- start header -->
+        <div id="headerDivID">
+            <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
+            <div id="searchDivID">
+                <!-- search -->
+                <form action="Home.html">
+                    <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
+                    <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
+                </form>
+            </div>
+            <div id="welcomeMsgDivID"><span id="welcomeMsgID"></span></div><!-- welcome Message -->
+            <div><a href="Home.html"><input type="button" id="LogoutID" value="LOGOUT" style="display: none;"></a></div><!-- logout button -->
+            <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div>
+            <!-- Sign in button -->
+            <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP" style="display: none;"></a></div>
+            <!-- Sign in button -->
+            <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span
+                        class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
+        </div>
+
+    </header>
     <nav>
         <!-- Nav bar -->
         <div class="navbar">
@@ -82,35 +88,35 @@
                     <a href="women'sRing.html">Ring</a>
                     <a href="women'sBracelet.html">Bracelet</a>
                     <a href="women'sHairClips.html">Hair clips</a>
-                  </div>
+                </div>
             </div>
 
             <!-- men fashion dropdown menu -->
             <div class="dropdown">
-                <button class="dropbtn">Men Fashion 
-                  <i class="fa fa-caret-down"></i>
+                <button class="dropbtn">Men Fashion
+                    <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="men'sTrousers.html">Trousers</a>
-                  <a href="men'sTshirts.html">T-Shirts</a>
-                  <a href="men'sSweatshirts.html">Shirts and Sweetshirts</a>
-                  <a href="men'sJackets.html">Jackets</a>
-                  <a href="men'sshoes.html">shoes</a>
-                  <a href="men'sPullovers.html">pullover</a>
-                  
+                    <a href="men'sTrousers.html">Trousers</a>
+                    <a href="men'sTshirts.html">T-Shirts</a>
+                    <a href="men'sSweatshirts.html">Shirts and Sweetshirts</a>
+                    <a href="men'sJackets.html">Jackets</a>
+                    <a href="men'sshoes.html">shoes</a>
+                    <a href="men'sPullovers.html">pullover</a>
+
                 </div>
-              </div>
-              <!-- Men Accessories dropdown menu -->
-              <div class="dropdown">
-                <button class="dropbtn">Men Accessories 
-                  <i class="fa fa-caret-down"></i>
+            </div>
+            <!-- Men Accessories dropdown menu -->
+            <div class="dropdown">
+                <button class="dropbtn">Men Accessories
+                    <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="men'sWatches.html">Watches</a>
-                  <a href="men'sWallet.html">Wallets</a>
-                  <a href="men'sGlasses.html">Glasses</a>
+                    <a href="men'sWatches.html">Watches</a>
+                    <a href="men'sWallet.html">Wallets</a>
+                    <a href="men'sGlasses.html">Glasses</a>
                 </div>
-              </div>
+            </div>
             <!-- children fashion dropdown menu -->
             <div class="dropdown">
                 <button class="dropbtn">Kides Fashion
@@ -119,7 +125,7 @@
                 <div class="dropdown-content">
                     <a href="boys.html">Boys Fashion</a>
                     <a href="girls.html">Girls Fashion</a>
-                  </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -127,7 +133,7 @@
     <div class="signUp-Image" style="background: #ffffff; padding: 80px 0">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form id="form" onsubmit="test()">
+            <form id="form" onsubmit="test(event)">
                 <div class="header">
                     <h2>Welcome, <h2>Create Account</h2>
                     </h2>
@@ -139,19 +145,22 @@
                 </div>
                 <div class="input-field-style">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <input type="email" placeholder="Enter Your Email" id="email" required />
+                    <input type="email" placeholder="Enter Your Email" id="email" onblur="checkEmail()" required />
                 </div>
+                <span id="invalid" class="color colorError"></span>
                 <div class="input-field-style">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" placeholder="Enter Your Password" id="password" required />
                 </div>
+                <span id="invalid" class="color colorError"></span>
                 <div class="input-field-style">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" placeholder="Confirm Passaword" id="Confirmpass" onblur="validatePassword()"
                         required />
+                    <span id="invalid" class="color colorError"></span>
+
                 </div>
-                <span id="invalid" class="color colorError"></span>
-                <button class="btn" style="align-items: center; text-align: center;" onclick="savedata()">Sign
+                <button class="btn" style="align-items: center; text-align: center;" onclick="savedata()" >Sign
                     Up</button>
                 <p class="social-text" style="text-align: center; align-items: center;">sign up with </p>
                 <div class="social-media">
@@ -165,6 +174,8 @@
                         <i class="fab fa-google" aria-hidden="true"></i>
                     </a>
                 </div>
+                <a href="login.html" style="text-align: center; color: #AE0035;" target="_blank">you already have an
+                    account? </a>
             </form>
         </div>
     </div>

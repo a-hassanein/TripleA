@@ -37,19 +37,7 @@ function getdata(){
     var confirmpass = localStorage.getItem("confirmpassword");
 }
 //////////////////////////////////////////////////////////////////////////////////////
-function buttonSubmit(ev) {
 
-    if (validatePassword()) {
-        ev.target.submit();
-        location.href="../html/Home.html"
-        document.getElementById("invalid").innerHTML = "";
-    }
-    else {
-        ev.preventDefault();
-        document.getElementById("invalid").innerText= "❌ Please correct the validation errors first";
-
-    }
-}
 var checked = true ; 
 function test() 
 {

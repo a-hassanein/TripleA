@@ -35,6 +35,7 @@
         </form>
       </div>
       <div id="welcomeMsgDivID"><span id="welcomeMsgID"></p> </span></div><!-- welcome Message -->
+      <div><a href="Home.html"><input type="button" id="LogoutID" value="LOGOUT"></a></div><!-- logout button -->
       <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
       <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
       <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span
@@ -54,6 +55,20 @@
     console.log(Username);
 
     document.getElementById("welcomeMsgID").innerHTML = "Hi, " + Username;
+    if (Username===undefined)
+    {
+      document.getElementById("welcomeMsgID").innerHTML = "";
+      document.getElementById("SigninID").style.display="ruby" ;
+      document.getElementById("LogoutID").style.display="none" ;
+      document.getElementById("SignupID").style.display="ruby" ;
+
+    }
+    else 
+    {
+      document.getElementById("SigninID").style.display="none" ;
+      document.getElementById("LogoutID").style.display="ruby" ;
+      document.getElementById("SignupID").style.display="none" ;
+    }
   </script>
 
   <nav>

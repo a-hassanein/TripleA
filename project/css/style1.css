@@ -97,8 +97,6 @@ box-sizing: border-box;
   font-weight: 500;
   background-color: #ae0035;
   border: 1px solid rgb(150, 150, 150);
-
-  
 }
 /* Signup button style */
 #SignupID{
@@ -114,7 +112,20 @@ box-sizing: border-box;
   background-color: #ae0035;
   border: 1px solid rgb(150, 150, 150);
   
-  
+}
+#LogoutID{
+  position: relative;
+  width: 120px;
+  height: 50px;
+  top: 25%;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #ae0035;
+  border: 1px solid rgb(150, 150, 150);
+
 }
 /* cart button style */
 #cartID{
