@@ -31,14 +31,34 @@
           <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
         </form>
       </div>
-      <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
+      <div id="welcomeMsgDivID"><span id="welcomeMsgID"></span></div><!-- welcome Message -->
+      <div><a href="Home.html"><input type="button" id="logOutID" value="LOGOUT"></a></div><!-- Sign in button -->
       <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
       <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
-      <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
-    
+      <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span
+            class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
+
     </div>
 
   </header>
+
+  <script>
+    var Username = localStorage.getItem("name");
+    if (Username === null) {
+      document.getElementById("welcomeMsgID").innerHTML = "";
+      document.getElementById("SigninID").style.display = "ruby";
+      document.getElementById("logOutID").style.display = "none";
+      document.getElementById("SignupID").style.display = "ruby";
+
+    }
+    else {
+      document.getElementById("welcomeMsgID").innerHTML = "Hi, " + Username;
+      document.getElementById("SigninID").style.display = "none";
+      document.getElementById("logOutID").style.display = "ruby";
+      document.getElementById("SignupID").style.display = "none";
+    }
+  </script>
+
 
   <nav>
     <!-- Nav bar -->
@@ -128,7 +148,7 @@
   </nav>
   <!-- //////////////////////////////////////////////////////////////////////// -->
   <div class="imgContain">
-      <img src="../../images/order.png">
+    <img src="../../images/order.png">
   </div>
 
   <!-- Start Footer -->
@@ -139,34 +159,33 @@
     <br><br>
     <p style="color : rgb(255, 255, 255) ;">&copy; Tripla A team (Team3)</p>
     <br>
-    <p style="color : rgb(255, 255, 255) ; margin-top: -30px;"><a
-            href="mailto:TripalA@gmail.com">TripalA@gmail.com</a></p>
-</footer>
-<!-- end Footer -->
+    <p style="color : rgb(255, 255, 255) ; margin-top: -30px;"><a href="mailto:TripalA@gmail.com">TripalA@gmail.com</a>
+    </p>
+  </footer>
+  <!-- end Footer -->
 
-<script src="../js/menTrousers.js"></script>
+  <script src="../js/menTrousers.js"></script>
 
-<style>
-    .imgContain img{
-        width: 880px;
-        height: 600px;
-        
-        
+  <style>
+    .imgContain img {
+      width: 880px;
+      height: 600px;
+
+
     }
 
-    .imgContain{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        vertical-align: center;
-        flex-direction: column;
-        padding-top: 100px;
+    .imgContain {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: center;
+      flex-direction: column;
+      padding-top: 100px;
     }
-
   </style>
 
-  
+
 </body>
 
 </html>
