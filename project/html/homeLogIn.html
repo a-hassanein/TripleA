@@ -2,9 +2,7 @@
 <html>
 
 <head>
-  <title>
-    Women's Rings
-  </title>
+  <title>Home</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +11,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <script src="../js/Home.js"></script>
   <link rel="stylesheet" href="../css/style1.css">
   <link rel="stylesheet" href="../css/style2.css">
-  <link rel="stylesheet" href="../css/products.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-  <script src="../js/men'sjackets.js"></script>
-
+</head>
 
 </head>
 
-<body>
+
+<body id="a">
   <header>
 
     <!-- start header -->
@@ -38,36 +36,43 @@
         </form>
       </div>
       <div id="welcomeMsgDivID"><span id="welcomeMsgID"></span></div><!-- welcome Message -->
-      <div><a href="homeLogIn.html"><input type="button" id="logOutID" value="LOGOUT"></a></div><!-- Sign in button -->
-      <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
+      <div><a href="Home.html"><input type="button" id="logOutID" style="display: none;"   value="LOGOUT"></a></div><!-- Sign in button -->
+      <div><a href="login.html"><input type="button" id="SigninID"  value="SIGN IN"></a></div><!-- Sign in button -->
       <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
-      <div><a href="cart.html"><input type="image" src="../../images/cart.png" style="border: none;" id="cartID"
-            class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
+      <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
+    
     </div>
-
+  
   </header>
-
   <script>
-    var Username = localStorage.getItem("name");
-    if (Username === null) {
+    var url = location.href;
+    console.log(url);
+    var qString = location.search; // params
+    console.log(qString)
+    var Username = qString.split("?")[1];
+    console.log(Username);
+
+    var nameUser = localStorage.getItem("name") ;
+    if (nameUser===null || Username===undefined)
+    {
       document.getElementById("welcomeMsgID").innerHTML = "";
-      document.getElementById("SigninID").style.display = "ruby";
-      document.getElementById("logOutID").style.display = "none";
-      document.getElementById("SignupID").style.display = "ruby";
+      document.getElementById("SigninID").style.display="ruby" ;
+      document.getElementById("logOutID").style.display="none" ;
+      document.getElementById("SignupID").style.display="ruby" ;
 
     }
-    else {
+    else
+    {
       document.getElementById("welcomeMsgID").innerHTML = "Hi, " + Username;
-      document.getElementById("SigninID").style.display = "none";
-      document.getElementById("logOutID").style.display = "ruby";
-      document.getElementById("SignupID").style.display = "none";
+      document.getElementById("SigninID").style.display="none" ;
+      document.getElementById("logOutID").style.display="ruby" ;
+      document.getElementById("SignupID").style.display="none" ;
     }
   </script>
-
   <nav>
     <!-- Nav bar -->
     <div class="navbar">
-      <a href="Home.html">Home</a>
+      <a href="#">Home</a>
 
       <!-- all category dropdown menu -->
       <div class="dropdown">
@@ -151,167 +156,70 @@
     </div>
   </nav>
   <!-- //////////////////////////////////////////////////////////////////////// -->
-
-
-  <!-- start of products div-->
-
-
-  <div class="wraper">
-    <div class="pageHeading">
-      <h1> TRIPLE A</h1>
-      <h3>WOMEN'S ACCESSORIES</h3>
-      <h4>&mdash; RINGS &mdash;</h4>
-    </div>
-    <!--product number 1-->
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/1.jpg"  onclick="location.href=''">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5  onclick="location.href=''">Fashion</h5>
-          <h5 class="price">EGP 170</h5>
-
-        </div>
-        <p>Fashion S925 Sterling Silver Ring For Women Bridal</p>
-
-        <button class="addToCart">Add To Cart</button>
+  <!--  Image sliger start -->
+  <div class="slider">
+    <div class="slides">
+      <!--  radio buttons start -->
+      <input type="radio" name="radio-btn" id="radioButtonID1">
+      <input type="radio" name="radio-btn" id="radioButtonID2">
+      <input type="radio" name="radio-btn" id="radioButtonID3">
+      <input type="radio" name="radio-btn" id="radioButtonID4">
+      <!--  radio buttons end -->
+      <!--  slider images start -->
+      <div class="slide first">
+        <img src="../../images/image_slider_1.png" alt="">
       </div>
-    </div>
-
-    <!--product number 2-->
-
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/2.jpg"  onclick="location.href=''">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5  onclick="location.href=''">Sterling Silver 925 </h5>
-          <h5 class="price">EGP 225</h5>
-
-        </div>
-        <p> Sterling Silver 925 Fashion Ring For Women</p>
-
-        <button class="addToCart">Add To Cart</button>
+      <div class="slide">
+        <img src="../../images/image_slider_2.png" alt="">
       </div>
-    </div>
-
-    <!--product number 3-->
-
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/3.jpg"  onclick="location.href=''">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5  onclick="location.href=''">Dar</h5>
-          <h5 class="price">EGP 285</h5>
-
-        </div>
-        <p> Dar Diamond Wedding Ring 18K White Gold Plated Cubic Zircon Ring </p>
-
-        <button class="addToCart">Add To Cart</button>
+      <div class="slide">
+        <img src="../../images/image_slider_3.png" alt="">
       </div>
-    </div>
-
-    <!--product number 4-->
-
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/4.jpg">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5>Italian Silver Ring</h5>
-          <h5 class="price">EGP 236  </h5>
-
-        </div>
-        <p>Pure Italian Silver Ring 925 </p>
-
-        <button class="addToCart">Add To Cart</button>
+      <div class="slide">
+        <img src="../../images/image_slider_4.png" alt="">
       </div>
-    </div>
-
-    <!--product number 5-->
-
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/5.jpg" onclick="myfunction()">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5 onclick="myfunction()">3Diamonds</h5>
-          <h5 class="price">EGP 221</h5>
-
-        </div>
-        <p>3Diamonds Twins Ring For Women 18K Platinum Plated</p>
-
-        <button class="addToCart">Add To Cart</button>
+      <!--  slider images end -->
+      <!-- Automatic navigation start -->
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
       </div>
+      <!-- Automatic navigation end -->
     </div>
-
-    <!--product number 6-->
-
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/6.jpg">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5>Women's Ring</h5>
-          <h5 class="price">EGP 250</h5>
-
-        </div>
-        <p>Women's Ring - Silver Plated</p>
-
-        <button class="addToCart">Add To Cart</button>
-      </div>
+    <div class="navigation-manual">
+      <label for="radioButtonID1" class="manual-btn"></label>
+      <label for="radioButtonID2" class="manual-btn"></label>
+      <label for="radioButtonID3" class="manual-btn"></label>
+      <label for="radioButtonID4" class="manual-btn"></label>
     </div>
-
-    <!--product number 7-->
-
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/7.jpg">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5>3Diamonds </h5>
-          <h5 class="price">EGP 230</h5>
-
-        </div>
-        <p>3Diamonds Band Ring For Women Gold Plated</p>
-
-        <button class="addToCart">Add To Cart</button>
-      </div>
-    </div>
-
-    <!--product number 8-->
-
-    <div class="pageItems">
-
-      <img src="../../images/Women/Rings/8.jpg">
-
-      <div class="productDetailsContainer">
-        <div class="productDetails">
-          <h5>Fashion</h5>
-          <h5 class="price">EGP 40</h5>
-
-        </div>
-
-        <p> Fashion Women Creative Leaves Design Alloy Hollow Out-Sea Blue </p>
-
-
-        <button class="addToCart">Add To Cart</button>
-      </div>
-    </div>
-
-
-
   </div>
-  <!-- end of products div-->
 
+  <!--  Image slider end -->
+  <!-- //////////////////////////////////////////////////////////////////////// -->
+
+  <!--  category Image grid Start -->
+
+
+  <div class="CategoryImgGridID">
+    <div class="categorydiv"><a href="men'sshoes.html"><input type="image" src="../../images/category_image1.png"
+          id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+    <div class="categorydiv"><a href="girls.html"><input type="image" src="../../images/category_image2.png" id="cartID"
+          class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+    <div class="categorydiv"><a href="women'sdresses.html"><input type="image" src="../../images/category_image4.png"
+          id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+    <div class="categorydiv"><a href="men'sJackets.html"><input type="image" src="../../images/category_image3.png"
+          id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+    <div class="categorydiv"><a href="women'sshoes.html"><input type="image" src="../../images/category_image5.png"
+          id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+    <div class="categorydiv"><a href="men'sWallet.html"><input type="image" src="../../images/category_image6.png"
+          id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+  </div>
+
+  <!--  category Image grid end -->
+
+  <!-- Start Footer -->
   <footer>
     <a href="Home.html" style="font-size: 28px; margin-top: 20px;">Home</a> |
     <a href="contactUsNew.html" style="font-size: 28px;">Contact Me</a> |
