@@ -50,3 +50,19 @@ function buttonSubmit(ev) {
 
     }
 }
+var checked = true ; 
+function test() 
+{
+    if (!checked)
+    {
+        event.preventDefault() ;
+        document.getElementById("invalid").innerText= "❌ Please correct the validation errors first" ; 
+    }
+    else 
+    {
+        event.preventDefault() ; 
+        var userName = document.getElementById("username").value; 
+        var URL = "../html/Home.html?" + userName ; 
+        window.location = URL ; 
+    }
+}

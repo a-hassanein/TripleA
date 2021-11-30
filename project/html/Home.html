@@ -17,32 +17,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
 </head>
-<header>
-
-  <!-- start header -->
-  <div id="headerDivID">
-    <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
-    <div id="searchDivID">
-      <!-- search -->
-      <form action="Home.html">
-        <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
-        <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
-      </form>
-    </div>
-    <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
-    <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
-    <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
-    <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
-  
-  </div>
-
-</header>
-
 
 
 <body>
+  <header>
 
+    <!-- start header -->
+    <div id="headerDivID">
+      <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
+      <div id="searchDivID">
+        <!-- search -->
+        <form action="Home.html">
+          <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
+          <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
+        </form>
+      </div>
+      <div id="welcomeMsgDivID"><span id="welcomeMsgID"></p> </span></div><!-- welcome Message -->
+      <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
+      <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
+      <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span
+            class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
+
+    </div>
+
+  </header>
+
+
+  <script>
+    var url = location.href;
+    console.log(url);
+    var qString = location.search; // params
+    console.log(qString)
+    var Username = qString.split("?")[1];
+    console.log(Username);
+
+    document.getElementById("welcomeMsgID").innerHTML = "Hi, " + Username;
+  </script>
 
   <nav>
     <!-- Nav bar -->
@@ -182,12 +194,12 @@
           id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
     <div class="categorydiv"><a href="girls.html"><input type="image" src="../../images/category_image2.png" id="cartID"
           class="categoryImg" style="width: 100%; height: 100%;"></a></div>
-    <div class="categorydiv"><a href="women'sdresses.html"><input type="image" src="../../images/category_image4.png" id="cartID"
-          class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+    <div class="categorydiv"><a href="women'sdresses.html"><input type="image" src="../../images/category_image4.png"
+          id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
     <div class="categorydiv"><a href="men'sJackets.html"><input type="image" src="../../images/category_image3.png"
           id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
-    <div class="categorydiv"><a href="women'sshoes.html"><input type="image" src="../../images/category_image5.png" id="cartID"
-          class="categoryImg" style="width: 100%; height: 100%;"></a></div>
+    <div class="categorydiv"><a href="women'sshoes.html"><input type="image" src="../../images/category_image5.png"
+          id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
     <div class="categorydiv"><a href="men'sWallet.html"><input type="image" src="../../images/category_image6.png"
           id="cartID" class="categoryImg" style="width: 100%; height: 100%;"></a></div>
   </div>
