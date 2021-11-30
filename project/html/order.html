@@ -2,9 +2,7 @@
 <html>
 
 <head>
-  <title>
-    Cart
-  </title>
+  <title>Thank You</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style1.css">
   <link rel="stylesheet" href="../css/style2.css">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-  
-
-
 </head>
 
 <body>
@@ -45,7 +39,6 @@
     </div>
 
   </header>
-
 
   <nav>
     <!-- Nav bar -->
@@ -134,24 +127,11 @@
     </div>
   </nav>
   <!-- //////////////////////////////////////////////////////////////////////// -->
-  <div class="products-container">
-    <div class="product-header">
-      <h5 class="product-title">PRODUCT</h5>
-      <h5 class="price">PRICE</h5>
-      <h5 class="quantity">QUANTITY</h5>
-      <h5 class="total">TOTAL</h5>
-    </div>
-    <div class="products">
-
-    </div>
+  <div class="imgContain">
+      <img src="../../images/order.png">
   </div>
 
-
-  
-<div><a href="order.html" onclick="deleteItem();"><input type="button" id="checkOutID" value="CHECK OUT"></a></div><!-- Sign up button -->
-
-
-  <!-- /////////////////////////////////////////////////////////////////////////-->
+  <!-- Start Footer -->
   <footer>
     <a href="Home.html" style="font-size: 28px; margin-top: 20px;">Home</a> |
     <a href="contactUsNew.html" style="font-size: 28px;">Contact Me</a> |
@@ -159,22 +139,34 @@
     <br><br>
     <p style="color : rgb(255, 255, 255) ;">&copy; Tripla A team (Team3)</p>
     <br>
-    <p style="color : rgb(255, 255, 255) ; margin-top: -30px;"><a href="mailto:TripalA@gmail.com">TripalA@gmail.com</a>
-    </p>
-  </footer>
-  <!-- end Footer -->
+    <p style="color : rgb(255, 255, 255) ; margin-top: -30px;"><a
+            href="mailto:TripalA@gmail.com">TripalA@gmail.com</a></p>
+</footer>
+<!-- end Footer -->
 
-  <script>
-    function deleteItem() {
-        localStorage.removeItem("productsInCart");
-        localStorage.removeItem("totalCost");
-        localStorage.removeItem("cartNumbers");
-    }   
-  </script>
+<script src="../js/menTrousers.js"></script>
 
-  <script src="../js/menTrousers.js"></script>
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-  <link rel="stylesheet" href="../css/cart.css">
+<style>
+    .imgContain img{
+        width: 880px;
+        height: 600px;
+        
+        
+    }
+
+    .imgContain{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+  </style>
+
+  
 </body>
-</html>
 
+</html>
