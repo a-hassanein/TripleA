@@ -20,7 +20,7 @@
 </head>
 
 
-<body style="margin: 0;padding: 0;font-family: 'Cairo', sans-serif;;">
+<body>
     <header>
 
         <!-- start header -->
@@ -33,18 +33,32 @@
               <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
             </form>
           </div>
-          <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
+          <div id="welcomeMsgDivID"><span id="welcomeMsgID"></span></div><!-- welcome Message -->
+          <div><a href="Home.html"><input type="button" id="logOutID" value="LOGOUT"></a></div><!-- Sign in button -->
           <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
           <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
-          <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
-        
+          <div><a href="cart.html"><input type="image" src="../../images/cart.png" style="border: none;" id="cartID"
+                class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
         </div>
     
       </header>
-
-
-
-    <body>
+    
+      <script>
+        var Username = localStorage.getItem("name");
+        if (Username === null) {
+          document.getElementById("welcomeMsgID").innerHTML = "";
+          document.getElementById("SigninID").style.display = "ruby";
+          document.getElementById("logOutID").style.display = "none";
+          document.getElementById("SignupID").style.display = "ruby";
+    
+        }
+        else {
+          document.getElementById("welcomeMsgID").innerHTML = "Hi, " + Username;
+          document.getElementById("SigninID").style.display = "none";
+          document.getElementById("logOutID").style.display = "ruby";
+          document.getElementById("SignupID").style.display = "none";
+        }
+      </script>
 
 
         <nav>

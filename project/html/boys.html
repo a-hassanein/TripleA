@@ -1,307 +1,329 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Boys Fashion
-        </title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <link rel="stylesheet" href="../css/style1.css">
-        <link rel="stylesheet" href="../css/style2.css">
-        <link rel="stylesheet" href="../css/products.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet"> 
-        
-       
 
-    </head>
-    <body>
-      <header>
+<head>
+  <title>
+    Boys Fashion
+  </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/style1.css">
+  <link rel="stylesheet" href="../css/style2.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
-        <!-- start header -->
-        <div id="headerDivID">
-          <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
-          <div id="searchDivID">
-            <!-- search -->
-            <form action="Home.html">
-              <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
-              <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
-            </form>
+
+
+</head>
+
+<body>
+  <header>
+
+    <!-- start header -->
+    <div id="headerDivID">
+      <div><a href="Home.html"><img src="../../images/3A_logo.png" id="logoImageID"></a></div><!-- logo -->
+      <div id="searchDivID">
+        <!-- search -->
+        <form action="Home.html">
+          <input type="text" name="search" placeholder="Search.." id="searchInputID"><!-- search input -->
+          <input type="submit" value="SEARCH" id="searchButtonID"><!-- search button -->
+        </form>
+      </div>
+      <div id="welcomeMsgDivID"><span id="welcomeMsgID"></span></div><!-- welcome Message -->
+      <div><a href="Home.html"><input type="button" id="logOutID" value="LOGOUT"></a></div><!-- Sign in button -->
+      <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
+      <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
+      <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span
+            class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
+
+    </div>
+
+  </header>
+
+  <script>
+    var Username = localStorage.getItem("name");
+    if (Username === null) {
+      document.getElementById("welcomeMsgID").innerHTML = "";
+      document.getElementById("SigninID").style.display = "ruby";
+      document.getElementById("logOutID").style.display = "none";
+      document.getElementById("SignupID").style.display = "ruby";
+
+    }
+    else {
+      document.getElementById("welcomeMsgID").innerHTML = "Hi, " + Username;
+      document.getElementById("SigninID").style.display = "none";
+      document.getElementById("logOutID").style.display = "ruby";
+      document.getElementById("SignupID").style.display = "none";
+    }
+  </script>
+
+  <nav>
+    <!-- Nav bar -->
+    <div class="navbar">
+      <a href="Home.html">Home</a>
+
+      <!-- all category dropdown menu -->
+      <div class="dropdown">
+        <button class="dropbtn">All
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Women Fashion</a>
+          <a href="#">Women Accessories</a>
+          <a href="#">Men Fashion</a>
+          <a href="#">Men Accessories</a>
+          <a href="#">Children Fashion</a>
+        </div>
+      </div>
+      <!-- women fashion dropdown menu -->
+      <div class="dropdown">
+        <button class="dropbtn">Women Fashion
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="dropdown-content">
+            <a href="women'sdresses.html">Dresses</a>
+            <a href="women'sTshirts.html">Shirts and Blouses</a>
+            <a href="women'sweatshirts.html">Hoodies and Sweetshirts</a>
+            <a href="women'sTrousers.html">Trousers </a>
+            <a href="women'sCardigan.html">Cardigan </a>
+            <a href="women'sshoes.html">Shoes </a>
+            <a href="women'sjackets.html">Jackets And coats </a>
           </div>
-          <div id="welcomeMsgDivID"><span id="welcomeMsgID">Hi, User Name </span></div><!-- welcome Message -->
-          <div><a href="login.html"><input type="button" id="SigninID" value="SIGN IN"></a></div><!-- Sign in button -->
-          <div><a href="signup.html"><input type="button" id="SignupID" value="SIGN UP"></a></div><!-- Sign up button -->
-          <div><a href="cart.html"><input type="image" src="../../images/cart.png" id="cartID" class="cart"><span class="cart_Number" style="font-weight: bold;">0</span></a></div> <!-- cart button -->
-        
         </div>
-    
-      </header>
-
-
-        <nav> <!-- Nav bar -->
-            <div class="navbar">
-                <a href="Home.html">Home</a>
-                
-                <!-- all category dropdown menu -->
-                <div class="dropdown">
-                  <button class="dropbtn">All 
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="#">Women Fashion</a>
-                    <a href="#">Women Accessories</a>
-                    <a href="#">Men Fashion</a>
-                    <a href="#">Men Accessories</a>
-                    <a href="#">Children Fashion</a>
-                  </div>
-                </div> 
-                <!-- women fashion dropdown menu -->
-                <div class="dropdown">
-                  <button class="dropbtn">Women Fashion 
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <div class="dropdown-content">
-                      <a href="women'sdresses.html">Dresses</a>
-                      <a href="women'sTshirts.html">Shirts and Blouses</a>
-                      <a href="women'sweatshirts.html">Hoodies and Sweetshirts</a>
-                      <a href="women'sTrousers.html">Trousers </a>
-                      <a href="women'sCardigan.html">Cardigan </a>
-                      <a href="women'sshoes.html">Shoes </a>
-                      <a href="women'sjackets.html">Jackets And coats </a>
-                    </div>
-                  </div>
-                </div>
-                <!-- women accessories dropdown menu -->
-                <div class="dropdown">
-                  <button class="dropbtn">Women Accessories 
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="women'sNecklace.html">Necklace</a>
-                    <a href="women'sEarrings.html">Earrings</a>
-                    <a href="women'sBucketHat.html">Bucket hat</a>
-                    <a href="women'sRing.html">Ring</a>
-                    <a href="women'sBracelet.html">Bracelet</a>
-                    <a href="women'sHairClips.html">Hair clips</a>
-                  </div>
-                </div>
-    
-                <!-- men fashion dropdown menu -->
-                <div class="dropdown">
-                  <button class="dropbtn">Men Fashion 
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="men'sTrousers.html">Trousers</a>
-                    <a href="men'sTshirts.html">T-Shirts</a>
-                    <a href="men'sSweatshirts.html">Shirts and Sweetshirts</a>
-                    <a href="men'sJackets.html">Jackets</a>
-                    <a href="men'sshoes.html">shoes</a>
-                    <a href="men'sPullovers.html">pullover</a>
-                    
-                  </div>
-                </div>
-                <!-- Men Accessories dropdown menu -->
-                <div class="dropdown">
-                  <button class="dropbtn">Men Accessories 
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="men'sWatches.html">Watches</a>
-                    <a href="men'sWallet.html">Wallets</a>
-                    <a href="men'sGlasses.html">Glasses</a>
-                  </div>
-                </div>
-                <!-- children fashion dropdown menu -->
-                <div class="dropdown">
-                  <button class="dropbtn">Kides Fashion 
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="boys.html">Boys Fashion</a>
-                    <a href="girls.html">Girls Fashion</a>
-                  </div>
-                </div>
-            </div>
-          </nav>
-          <!-- //////////////////////////////////////////////////////////////////////// -->
-
-
-          <!-- start of products div-->
-    
-
-        <div class="wraper">
-            <div class="pageHeading">
-                <h1> TRIPLE A</h1>
-                <h3>BOYS' Fashion</h3>
-                <!-- <h4>&mdash;  &mdash;</h4> -->
-            </div>
-            <!--product number 1-->
-            <div class="pageItems">
-
-                <img src="../../images/Boys/1.jpg" onclick="location.href='boysdescription.html'">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5 onclick="location.href='boysdescription.html'">Defacto</h5>
-                        <h5 class="price">EGP 200</h5>
-
-                    </div>
-                    <p>Defacto Boy Grey Tricot Pullover</p>
-
-                    <button class="addToCart" >Add To Cart</button>
-                </div>
-            </div>
-
-            <!--product number 2-->
-
-            <div class="pageItems">
-
-                <img src="../../images/Boys/2.jpg">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5>Defacto</h5>
-                        <h5 class="price">EGP 180</h5>
-
-                    </div>
-                    <p> Defacto Boy Navy Blue Knitted Sweat Shirt</p>
-
-                    <button class="addToCart">Add To Cart</button>
-                </div>
-            </div>
-
-            <!--product number 3-->
-
-            <div class="pageItems">
-
-                <img src="../../images/Boys/3.jpg">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5>Desert</h5>
-                        <h5 class="price">EGP 225</h5>
-
-                    </div>
-                    <p> Desert Kids Sneakers With Light Up Sole White </p>
-
-                    <button class="addToCart">Add To Cart</button>
-                </div>
-            </div>
-
-            <!--product number 4-->
-
-            <div class="pageItems">
-
-                <img src="../../images/Boys/4.jpg">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5>Defacto</h5>
-                        <h5 class="price">EGP 185</h5>
-
-                    </div>
-                    <p>Defacto Boy Beige Tricot Pullover </p>
-
-                    <button class="addToCart">Add To Cart</button>
-                </div>
-            </div>
-
-            <!--product number 5-->
-
-            <div class="pageItems" >
-
-                <img src="../../images/Boys/5.jpg" onclick="myfunction()">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5 onclick="myfunction()" >Defacto</h5>
-                        <h5 class="price">EGP 135</h5>
-
-                    </div>
-                    <p>Defacto Boy Anthracite Knitted Bottom Trousers</p>
-
-                    <button class="addToCart">Add To Cart</button>
-                </div>
-            </div>
-
-            <!--product number 6-->
-
-            <div class="pageItems">
-
-                <img src="../../images/Boys/6.jpg">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5>Andora </h5>
-                        <h5 class="price">EGP 220</h5>
-
-                    </div>
-                    <p>Andora Knitted High Turtle Neck Pullover - Maroon</p>
-
-                    <button class="addToCart">Add To Cart</button>
-                </div>
-            </div>
-
-            <!--product number 7-->
-
-            <div class="pageItems">
-
-                <img src="../../images/Boys/7.jpg">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5>LC Waikiki</h5>
-                        <h5 class="price">EGP 150</h5>
-
-                    </div>
-                    <p>LC Waikiki Hooded Printed Long Sleeve Boy Sweatshirt</p>
-
-                    <button class="addToCart">Add To Cart</button>
-                </div>
-            </div>
-
-            <!--product number 8-->
-
-            <div class="pageItems">
-
-                <img src="../../images/Boys/8.jpg">
-
-                <div class="productDetailsContainer">
-                    <div class="productDetails">
-                        <h5>Defacto </h5>
-                        <h5 class="price">EGP 200</h5>
-
-                    </div>
-                    
-                    <p> Defacto Boy Red Outer Wear Vest </p>
-                    
-
-                    <button class="addToCart">Add To Cart</button>
-                </div>
-            </div>
-
-
-            
+      </div>
+      <!-- women accessories dropdown menu -->
+      <div class="dropdown">
+        <button class="dropbtn">Women Accessories
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="women'sNecklace.html">Necklace</a>
+          <a href="women'sEarrings.html">Earrings</a>
+          <a href="women'sBucketHat.html">Bucket hat</a>
+          <a href="women'sRing.html">Ring</a>
+          <a href="women'sBracelet.html">Bracelet</a>
+          <a href="women'sHairClips.html">Hair clips</a>
         </div>
-        <!-- end of products div-->
+      </div>
 
-        <footer>
-          <a href="Home.html" style="font-size: 28px; margin-top: 20px;">Home</a> |
-          <a href="contactUsNew.html" style="font-size: 28px;">Contact Me</a> |
-          <a href="aboutUs.html" style="font-size: 28px;">About Us</a>
-          <br><br>
-          <p style="color : rgb(255, 255, 255) ;">&copy; Tripla A team (Team3)</p>
-          <br>
-          <p style="color : rgb(255, 255, 255) ; margin-top: -30px;"><a href="mailto:TripalA@gmail.com">TripalA@gmail.com</a></p>
-          </footer>
-          <!-- end Footer -->
-          <script src="../js/menTrousers.js"></script>
+      <!-- men fashion dropdown menu -->
+      <div class="dropdown">
+        <button class="dropbtn">Men Fashion
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="men'sTrousers.html">Trousers</a>
+          <a href="men'sTshirts.html">T-Shirts</a>
+          <a href="men'sSweatshirts.html">Shirts and Sweetshirts</a>
+          <a href="men'sJackets.html">Jackets</a>
+          <a href="men'sshoes.html">shoes</a>
+          <a href="men'sPullovers.html">pullover</a>
 
-    </body>
+        </div>
+      </div>
+      <!-- Men Accessories dropdown menu -->
+      <div class="dropdown">
+        <button class="dropbtn">Men Accessories
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="men'sWatches.html">Watches</a>
+          <a href="men'sWallet.html">Wallets</a>
+          <a href="men'sGlasses.html">Glasses</a>
+        </div>
+      </div>
+      <!-- children fashion dropdown menu -->
+      <div class="dropdown">
+        <button class="dropbtn">Kides Fashion
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="boys.html">Boys Fashion</a>
+          <a href="girls.html">Girls Fashion</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- //////////////////////////////////////////////////////////////////////// -->
+
+
+  <!-- start of products div-->
+
+  <div class="wraper">
+    <div class="pageHeading">
+      <h1> TRIPLE A</h1>
+      <h3>BOYS' Fashion</h3>
+      <!-- <h4>&mdash;  &mdash;</h4> -->
+    </div>
+    <!--product number 1-->
+    <div class="pageItems">
+
+      <img src="../../images/Boys/1.jpg" onclick="location.href='boysdescription.html'">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5 onclick="location.href='boysdescription.html'">Defacto</h5>
+          <h5 class="price">EGP 200</h5>
+
+        </div>
+        <p>Defacto Boy Grey Tricot Pullover</p>
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+    <!--product number 2-->
+
+    <div class="pageItems">
+
+      <img src="../../images/Boys/2.jpg">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5>Defacto</h5>
+          <h5 class="price">EGP 180</h5>
+
+        </div>
+        <p> Defacto Boy Navy Blue Knitted Sweat Shirt</p>
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+    <!--product number 3-->
+
+    <div class="pageItems">
+
+      <img src="../../images/Boys/3.jpg">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5>Desert</h5>
+          <h5 class="price">EGP 225</h5>
+
+        </div>
+        <p> Desert Kids Sneakers With Light Up Sole White </p>
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+    <!--product number 4-->
+
+    <div class="pageItems">
+
+      <img src="../../images/Boys/4.jpg">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5>Defacto</h5>
+          <h5 class="price">EGP 185</h5>
+
+        </div>
+        <p>Defacto Boy Beige Tricot Pullover </p>
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+    <!--product number 5-->
+
+    <div class="pageItems">
+
+      <img src="../../images/Boys/5.jpg" onclick="myfunction()">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5 onclick="myfunction()">Defacto</h5>
+          <h5 class="price">EGP 135</h5>
+
+        </div>
+        <p>Defacto Boy Anthracite Knitted Bottom Trousers</p>
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+    <!--product number 6-->
+
+    <div class="pageItems">
+
+      <img src="../../images/Boys/6.jpg">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5>Andora </h5>
+          <h5 class="price">EGP 220</h5>
+
+        </div>
+        <p>Andora Knitted High Turtle Neck Pullover - Maroon</p>
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+    <!--product number 7-->
+
+    <div class="pageItems">
+
+      <img src="../../images/Boys/7.jpg">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5>LC Waikiki</h5>
+          <h5 class="price">EGP 150</h5>
+
+        </div>
+        <p>LC Waikiki Hooded Printed Long Sleeve Boy Sweatshirt</p>
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+    <!--product number 8-->
+
+    <div class="pageItems">
+
+      <img src="../../images/Boys/8.jpg">
+
+      <div class="productDetailsContainer">
+        <div class="productDetails">
+          <h5>Defacto </h5>
+          <h5 class="price">EGP 200</h5>
+
+        </div>
+
+        <p> Defacto Boy Red Outer Wear Vest </p>
+
+
+        <button class="addToCart">Add To Cart</button>
+      </div>
+    </div>
+
+
+
+  </div>
+  <!-- end of products div-->
+
+  <footer>
+    <a href="Home.html" style="font-size: 28px; margin-top: 20px;">Home</a> |
+    <a href="contactUsNew.html" style="font-size: 28px;">Contact Me</a> |
+    <a href="aboutUs.html" style="font-size: 28px;">About Us</a>
+    <br><br>
+    <p style="color : rgb(255, 255, 255) ;">&copy; Tripla A team (Team3)</p>
+    <br>
+    <p style="color : rgb(255, 255, 255) ; margin-top: -30px;"><a href="mailto:TripalA@gmail.com">TripalA@gmail.com</a>
+    </p>
+  </footer>
+  <!-- end Footer -->
+  <script src="../js/menTrousers.js"></script>
+
+</body>
+
 </html>
