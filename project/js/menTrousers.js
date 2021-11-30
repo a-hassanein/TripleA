@@ -150,6 +150,7 @@ function displayCart(){
 
         productContainer.innerHTML += `
             <div class="basketTotalContainer">
+            <div class="cash"><h4><input type="checkbox" value="cash"><label>Cash</label></h4></div>
                 <h4 class="basketTotalTitle">
                     Basket Total
                 </h4>
