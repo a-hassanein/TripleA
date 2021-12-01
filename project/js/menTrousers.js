@@ -54,19 +54,19 @@ let products =[
 for(let i=0 ; i < carts.length ; i++){
     // debugger;
     carts[i].addEventListener('click',()=>{
-        cartNumber(products[i]);
-        totalCost(products[i])
+        cartNumber(products[i]); //put data in local stoage
+        totalCost(products[i]) //calculate total cost local stoage
     })
 }
 
-function onLoadCartNumbers(){
+function onLoadCartNumbers(){ //first load (import cart number)
     let productNumers = localStorage.getItem("cartNumbers");
     if(productNumers){
         document.querySelector(".cart_Number").textContent =productNumers ;
     }
 }
 
-function cartNumber(product){
+function cartNumber(product){ //put data in local stoage
     console.log("The product clicked is" , product);
     let productNumers = localStorage.getItem("cartNumbers");
     productNumers = parseInt(productNumers);
@@ -119,7 +119,7 @@ function totalCost(product){
 }
 }
 
-function displayCart(){
+function displayCart(){//first load 
     let cartItems =localStorage.getItem("productsInCart");
     cartItems =JSON.parse(cartItems);
     let productContainer = document.querySelector(".products");
