@@ -133,7 +133,7 @@
     <div class="signUp-Image" style="background: #ffffff; padding: 80px 0">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form id="form" onsubmit="test(event)">
+            <form id="form" action="Home.html">
                 <div class="header">
                     <h2>Welcome, <h2>Create Account</h2>
                     </h2>
@@ -145,9 +145,9 @@
                 </div>
                 <div class="input-field-style">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <input type="email" placeholder="Enter Your Email" id="email" onblur="checkEmail()" required />
+                    <input type="email" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onblur="validateEmail()" id="email" required />
                 </div>
-                <span id="invalid" class="color colorError"></span>
+                <span id="invalidemail" class="color colorError"></span>
                 <div class="input-field-style">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" placeholder="Enter Your Password" id="password" required />
@@ -157,11 +157,12 @@
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" placeholder="Confirm Passaword" id="Confirmpass" onblur="validatePassword()"
                         required />
-                    <span id="invalid" class="color colorError"></span>
-
                 </div>
+                <span id="invalidsubmit" class="color colorError"></span>
+
                 <button class="btn" style="align-items: center; text-align: center;" onclick="savedata()" >Sign
                     Up</button>
+                    <span id="invalid" class="color colorError"></span>
                 <p class="social-text" style="text-align: center; align-items: center;">sign up with </p>
                 <div class="social-media">
                     <a href="#" class="social-icon">

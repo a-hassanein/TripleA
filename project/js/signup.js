@@ -30,27 +30,20 @@ function checkpass(validatePassword)
     confirmpass.onkeyup = validatePassword;
 }
 ///////////////////////////////////////////////////////////////////////////////////////
-function getdata(){
-    var username = localStorage.getItem("name");
-    var useremail = localStorage.getItem("email");
-    var userpass = localStorage.getItem("pass");
-    var confirmpass = localStorage.getItem("confirmpassword");
+function validateEmail(){
+    var userEmail = document.getElementById("email") ; 
+    var SortedEmail =  localStorage.getItem("email");
+    if(userEmail.value === SortedEmail) {
+        userEmail.setCustomValidity("this email exists");
+        return false;
+    } else {
+        userEmail.setCustomValidity('');
+        return true;
+    }
+}
+function checkpass(validateEmail)
+{
+    var userEmail = document.getElementById("email") ; 
+    userEmail.onkeyup = validateEmail;
 }
 //////////////////////////////////////////////////////////////////////////////////////
-
-var checked = true ; 
-function test() 
-{
-    if (!checked)
-    {
-        event.preventDefault() ;
-        document.getElementById("invalid").innerText= "❌ Please correct the validation errors first" ; 
-    }
-    else 
-    {
-        event.preventDefault() ; 
-        var userName = document.getElementById("username").value; 
-        var URL = "../html/Home.html?" + userName ; 
-        window.location = URL ; 
-    }
-}
